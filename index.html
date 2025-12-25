@@ -6,72 +6,208 @@
     <title>Aditi Paul - CS Engineering Student</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e5e7eb;
+            background: #020617;
+        }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
         /* Header */
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+            color: #e5e7eb;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1f2937;
+        }
         nav { display: flex; justify-content: space-between; align-items: center; }
         nav h1 { font-size: 1.5rem; }
         nav ul { display: flex; list-style: none; gap: 2rem; }
-        nav a { color: white; text-decoration: none; transition: opacity 0.3s, transform 0.2s; }
-        nav a:hover { opacity: 0.8; transform: translateY(-1px); }
+        nav a {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: opacity 0.3s, transform 0.2s, color 0.2s;
+        }
+        nav a:hover { opacity: 0.9; transform: translateY(-1px); color: #60a5fa; }
 
         /* Hero */
-        .hero { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 120px 0 80px; text-align: center; }
-        .hero h2 { font-size: 3rem; margin-bottom: 1rem; color: #2c3e50; }
-        .hero p { font-size: 1.3rem; margin-bottom: 2rem; color: #555; }
-        .btn { display: inline-block; background: #3498db; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
-        .btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        .hero {
+            background: radial-gradient(circle at top, #1d2433 0%, #020617 55%, #000000 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .hero h2 { font-size: 3rem; margin-bottom: 1rem; color: #f9fafb; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; color: #9ca3af; }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #f9fafb;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
+        }
+        .btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 40px rgba(124, 58, 237, 0.6);
+        }
 
         /* Sections */
         section { padding: 80px 0; }
-        section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50; }
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #f9fafb;
+        }
 
         /* About */
-        .about { background: #f8f9fa; }
+        .about { background: #020617; }
         .about-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
-            padding: 2rem 1rem;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            background: radial-gradient(circle at top left, #1f2937 0%, #020617 60%);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.7);
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #1f2937;
         }
         .about-content:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            box-shadow: 0 24px 60px rgba(15,23,42,0.9);
         }
-        .about-content p { margin-bottom: 1rem; }
-        .about-content ul { margin-top: 1rem; list-style: none; padding-left: 0; }
-        .about-content li { margin: 0.3rem 0; }
+        .about-content p { margin-bottom: 1rem; color: #d1d5db; }
+
+        /* Highlights (Expertise / Skills / Goal) */
+        .highlights { background: #020617; }
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+        .highlight-card {
+            background: #020617;
+            border-radius: 14px;
+            padding: 1.8rem;
+            border: 1px solid #1f2937;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.7);
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+        }
+        .highlight-card h3 {
+            margin-bottom: 0.7rem;
+            color: #60a5fa;
+        }
+        .highlight-card p { color: #d1d5db; }
+        .highlight-card span { display: block; margin-top: 0.4rem; color: #9ca3af; }
+        .highlight-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(15,23,42,0.9);
+            border-color: #3b82f6;
+        }
 
         /* Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .skill-card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-        .skill-card h3 { color: #3498db; margin-bottom: 1rem; }
-        .skill-card:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .skills { background: #020617; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .skill-card {
+            background: #020617;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.7);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+            border: 1px solid #1f2937;
+        }
+        .skill-card h3 { color: #60a5fa; margin-bottom: 1rem; }
+        .skill-card p { color: #d1d5db; }
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(15,23,42,0.9);
+            border-color: #3b82f6;
+        }
 
         /* Projects */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .project-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.18); }
-        .project-card img { width: 100%; height: 200px; object-fit: cover; }
-        .project-info { padding: 1.5rem; }
-        .project-info h3 { color: #2c3e50; margin-bottom: 0.5rem; }
-        .tech-stack { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; }
-        .tech { background: #e3f2fd; padding: 0.2rem 0.8rem; border-radius: 15px; font-size: 0.8rem; color: #1976d2; }
+        .projects { background: #020617; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #020617;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+            border: 1px solid #1f2937;
+            padding: 1.5rem;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 60px rgba(15,23,42,0.95);
+            border-color: #6366f1;
+        }
+        .project-info h3 { color: #e5e7eb; margin-bottom: 0.5rem; }
+        .project-info p { color: #9ca3af; }
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .tech {
+            background: rgba(37,99,235,0.1);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #93c5fd;
+            border: 1px solid rgba(59,130,246,0.5);
+        }
 
         /* Contact */
-        .contact { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; }
-        .contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
-        .contact-links a { color: white; font-size: 1.5rem; transition: transform 0.3s, text-shadow 0.3s; }
-        .contact-links a:hover { transform: translateY(-3px) scale(1.03); text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+        .contact {
+            background: radial-gradient(circle at top, #1d2433 0%, #020617 60%);
+            color: #e5e7eb;
+            text-align: center;
+        }
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            color: #e5e7eb;
+            font-size: 1.5rem;
+            transition: transform 0.3s, text-shadow 0.3s, color 0.3s;
+        }
+        .contact-links a:hover {
+            transform: translateY(-3px) scale(1.05);
+            text-shadow: 0 0 16px rgba(129,140,248,0.9);
+            color: #a5b4fc;
+        }
 
         /* Footer */
-        footer { background: #2c3e50; color: white; text-align: center; padding: 1rem 0; }
+        footer {
+            background: #020617;
+            color: #6b7280;
+            text-align: center;
+            padding: 1rem 0;
+            border-top: 1px solid #1f2937;
+        }
 
         @media (max-width: 768px) {
             .hero h2 { font-size: 2rem; }
@@ -87,6 +223,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#highlights">Highlights</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -103,54 +240,72 @@
         </div>
     </section>
 
-    <!-- About (centered, no photo) -->
+    <!-- About (centered, no list) -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
                 <h2>About Me</h2>
-                <p>I'm a passionate 2nd-year Computer Science Engineering student from Nagpur, Maharashtra, with a strong foundation in theoretical computer science and practical problem-solving. I excel in algorithms, data structures, computer networks, and database systems.</p>
-                <p>Currently seeking remote internship opportunities to apply my skills in real-world projects while continuing my intensive academic studies.</p>
-                <ul>
-                    <li>🔬 <strong>Expertise:</strong> Automata Theory, Computer Networks, DBMS</li>
-                    <li>💻 <strong>Skills:</strong> C++, Python, JavaScript, SQL, java</li>
-                    <li>🎯 <strong>Goal:</strong> Remote Software Engineering Internships</li>
-                </ul>
+                <p>I'm a passionate 2nd-year Computer Science Engineering student from Nagpur, Maharashtra, with a strong foundation in theoretical computer science and practical problem-solving.</p>
+                <p>I enjoy working with algorithms, data structures, computer networks, and database systems, and I love building projects that connect theory with real-world applications.</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Highlights: Expertise / Skills / Goal -->
+    <section id="highlights" class="highlights">
+        <div class="container">
+            <h2>Profile Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h3>🔬 Expertise</h3>
+                    <p>Automata Theory, Computer Networks, Database Management Systems.</p>
+                    <span>Comfortable with formal languages, protocol behavior, and relational modeling.</span>
+                </div>
+                <div class="highlight-card">
+                    <h3>💻 Core Skills</h3>
+                    <p>C++, Python, JavaScript, SQL, Java, Problem Solving.</p>
+                    <span>Actively solving problems on platforms like LeetCode and CodeChef.</span>
+                </div>
+                <div class="highlight-card">
+                    <h3>🎯 Current Goal</h3>
+                    <p>Remote Software Engineering Internships.</p>
+                    <span>Looking for opportunities to apply CS fundamentals to impactful real-world projects.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills (grid) -->
     <section id="skills" class="skills">
         <div class="container">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>🧠 Algorithms & DS</h3>
-                    <p>LeetCode, CodeChef, Backtracking, DP, Greedy</p>
+                    <p>LeetCode, CodeChef, Backtracking, Dynamic Programming, Greedy.</p>
                 </div>
                 <div class="skill-card">
                     <h3>🌐 Computer Networks</h3>
-                    <p>Protocols (TCP/IP, FTP, SMTP), Packet Tracer</p>
+                    <p>TCP/IP, FTP, SMTP, basic routing concepts, Cisco Packet Tracer.</p>
                 </div>
                 <div class="skill-card">
                     <h3>🗄️ Database Systems</h3>
-                    <p>SQL, Normalization, ACID Properties, DDL/DML</p>
+                    <p>SQL, Normalization, ACID properties, DDL/DML operations.</p>
                 </div>
                 <div class="skill-card">
                     <h3>⚙️ Programming</h3>
-                    <p>C++, Python, JavaScript, Problem Solving</p>
+                    <p>C++, Python, JavaScript, Java, problem-solving mindset.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects (grid, no images) -->
     <section id="projects" class="projects">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200/667eea/ffffff?text=Expense+Tracker" alt="Expense Tracker">
                     <div class="project-info">
                         <h3>Expense Tracker</h3>
                         <p>Full-stack expense tracking application built with Python Flask. Features user authentication and data visualization.</p>
@@ -163,7 +318,6 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200/764ba2/ffffff?text=Network+Simulator" alt="Network Simulator">
                     <div class="project-info">
                         <h3>Network Protocol Simulator</h3>
                         <p>Simulated network protocols (FTP, SMTP, CoAP) using Cisco Packet Tracer with detailed analysis and documentation.</p>
@@ -175,7 +329,6 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Automata+Solver" alt="Automata Solver">
                     <div class="project-info">
                         <h3>Automata Theory Solver</h3>
                         <p>Implemented CFG to PDA conversion and grammar minimization algorithms with step-by-step visualization.</p>
@@ -207,7 +360,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Aditi Paul. Built with ❤️ for my CS journey.</p>
+            <p> <p>
         </div>
     </footer>
 
@@ -225,14 +378,13 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(102, 126, 234, 0.95)';
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
                 header.style.backdropFilter = 'blur(10px)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.background = 'linear-gradient(135deg, #0f172a 0%, #020617 100%)';
                 header.style.backdropFilter = 'none';
             }
         });
     </script>
 </body>
 </html>
-
