@@ -43,7 +43,3 @@ The website includes dedicated sections for **About Me, Technical Skills, Featur
 
 ---
 
-## 🖥 Live Preview
-
-> 💡 After hosting this portfolio (for example, with GitHub Pages), update this section with your live URL.
-
