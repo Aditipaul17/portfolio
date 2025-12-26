@@ -39,7 +39,8 @@ The website includes dedicated sections for **About Me, Technical Skills, Featur
   - LinkedIn  
   - Email  
   - GitHub  
-  - LeetCode  
+  - LeetCode
+  - HackerRank
 
 ---
 
